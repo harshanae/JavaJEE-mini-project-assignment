@@ -56,7 +56,7 @@ You can run your application in dev mode that enables live loading during develo
     
 ## API documentation
 
-Please refer the following link for aPI documentation
+Please refer the following link for API documentation
 
     https://app.swaggerhub.com/apis/husseyhh/harshana-petstore/1.0.0#/
 
@@ -66,24 +66,35 @@ Please refer the following link for aPI documentation
 
 ## Running cURL test to test the API
 
-Get all pets => curl --location --request GET 'localhost:8080/v1/pets'
-Get pet by Id => curl --location --request GET 'localhost:8080/v1/pets/getPet/{id}'
-Add pet => curl --location --request DELETE 'localhost:8080/v1/pets//updatePet/1' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "petName": "momo",
-    "petAge": "5",
-    "petType": "kitty"
-}'
-Delete pet => curl --location --request DELETE 'localhost:8080/v1/pets/deletePet/1' \
---data-raw ''
- Update pet => curl --location --request PUT 'localhost:8080/v1/pets/updatePet/2' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "petName": "jojo",
-    "petAge": "5",
-    "petType": "kitty"
-}'
+Get all pets
+
+    curl --location --request GET 'localhost:8080/v1/pets'
+
+Get pet by Id
+    
+    curl --location --request GET 'localhost:8080/v1/pets/getPet/{id}'
+Add pet
+    
+    curl --location --request DELETE 'localhost:8080/v1/pets//updatePet/1' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "petName": "momo",
+        "petAge": "5",
+        "petType": "kitty"
+    }'
+Delete pet
+    
+    curl --location --request DELETE 'localhost:8080/v1/pets/deletePet/1' \
+    --data-raw ''
+Update pet
+    
+    curl --location --request PUT 'localhost:8080/v1/pets/updatePet/2' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "petName": "jojo",
+        "petAge": "5",
+        "petType": "kitty"
+    }'
 
 
 
